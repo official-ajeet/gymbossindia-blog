@@ -1,7 +1,7 @@
 ---
 title: "Managing Gym Members Without a Register or Excel Sheet"
 description: "Still tracking gym members on paper or in Excel? Here's exactly what breaks, what it costs you, and what switching to software actually looks like."
-pubDate: 2026-09-18
+pubDate: 2026-09-8
 heroImage: "/blog-images/gym-member-management-without-excelcover.png"
 heroImageAlt: "Overwhelmed gym front desk staff surrounded by paper registers"
 tags: ["member management", "gym operations"]

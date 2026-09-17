@@ -1,7 +1,7 @@
 ---
 title: "Gym Management Software in India: A Complete Guide for Gym Owners"
 description: "How Indian gym owners can pick the right gym management software — attendance tracking, membership billing, GST-ready invoicing, and WhatsApp reminders explained."
-pubDate: 2026-09-15
+pubDate: 2026-09-01
 heroImage: "/blog-images/gym-management-software-india-guide-cover.png"
 heroImageAlt: "Gym owner reviewing member check-ins on a tablet"
 tags: ["gym management software", "gym owners india"]
