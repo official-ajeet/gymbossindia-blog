@@ -2,7 +2,7 @@
 title: "Stop Losing Members to Missed Renewals: A WhatsApp Reminder Workflow"
 description: "Most gym renewal losses aren't members quitting — they're memberships nobody reminded them about. Here's a one-tap WhatsApp workflow that fixes that."
 pubDate: 2026-09-25
-heroImage: "/public/blog-images/gym-membership-renewal-reminders-whatsappcover.png.png"
+heroImage: "/public/blog-images/gym-membership-renewal-reminders-whatsappcover.png"
 heroImageAlt: "Gym owner checking a tablet showing expiring memberships, phone in hand"
 tags: ["retention", "whatsapp", "renewals"]
 targetKeyword: "gym membership renewal reminder"
@@ -28,8 +28,8 @@ To be specific about what this is: it's **not** a fully automated messaging syst
 2. **You tap a member's name**, and it opens WhatsApp with a message already written for you — their name, plan, and expiry date filled in.
 3. **You hit send.** One tap after that, and it's gone — from your own number, exactly like any other WhatsApp message you'd send them.
 
-![Tablet showing an expiring-members list next to a phone with a WhatsApp message ready to send](/public/blog-images/gym-membership-renewal-reminders-whatsappdashboard-to-whatsapp.png.png)
-*The dashboard tells you who to message — you decide when to actually send it.*
+![Tablet showing an expiring-members list next to a phone with a WhatsApp message ready to send](/public/blog-images/gym-membership-renewal-reminders-whatsappdashboard-to-whatsapp.png)
+_The dashboard tells you who to message — you decide when to actually send it._
 
 ## The trade-off, honestly
 
@@ -43,8 +43,8 @@ For most single-location gyms, that trade-off is worth it — a two-minute daily
 
 The cadence that works best: check the dashboard once a day, ideally at the same time as another routine task (opening up, end-of-shift) so it doesn't get skipped. A member 7 days out gets an early, low-pressure nudge; someone on their expiry date gets a more direct one. The two minutes this takes daily is far cheaper than the member you lose because nobody noticed in time.
 
-![Gym member smiling while reading a WhatsApp message on their phone](/public/blog-images/gym-membership-renewal-reminders-whatsappthe-payoff.png.png)
-*A message that looks personally sent — because it was.*
+![Gym member smiling while reading a WhatsApp message on their phone](/public/blog-images/gym-membership-renewal-reminders-whatsappthe-payoff.png)
+_A message that looks personally sent — because it was._
 
 ## Setting this up
 
