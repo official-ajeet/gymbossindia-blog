@@ -2,7 +2,7 @@
 title: "Gym Management Software in India: A Complete Guide for Gym Owners"
 description: "How Indian gym owners can pick the right gym management software — attendance tracking, membership billing, GST-ready invoicing, and WhatsApp reminders explained."
 pubDate: 2026-09-15
-heroImage: "/public/blog-images/gym-management-software-india-guide-cover.png"
+heroImage: "/blog-images/gym-management-software-india-guide-cover.png"
 heroImageAlt: "Gym owner reviewing member check-ins on a tablet"
 tags: ["gym management software", "gym owners india"]
 targetKeyword: "gym management software india"
@@ -20,8 +20,8 @@ Running a gym in India means juggling membership renewals, attendance, trainer s
 - **WhatsApp-first communication** — most members in India respond to a WhatsApp message faster than an email or SMS. Software that reminds by WhatsApp gets seen.
 - **A dashboard you'd actually check** — monthly revenue and footfall trends, without having to build your own spreadsheet from receipts.
 
-![Gym front desk with QR code check-in on a tablet](/public/blog-images/gym-management-software-india-guide-qrscan.png)
-*QR check-in at the front desk — no register, no searching for a name.*
+![Gym front desk with QR code check-in on a tablet](/blog-images/gym-management-software-india-guide-qrscan.png)
+_QR check-in at the front desk — no register, no searching for a name._
 
 ## What it should cost
 
@@ -38,8 +38,8 @@ Gym software should be one flat monthly fee, not sliced into tiers that lock the
 
 A register can't send a renewal reminder. Excel can't tell you, at a glance, who's expiring in the next 7 days without someone manually checking every row. Both fall apart the moment more than one staff member needs to update them at the same time. Software fixes all three — not because it's more "modern," but because it removes the manual step where renewals get missed and revenue quietly leaks out.
 
-![Register and paper receipts on the left, a clean gym dashboard on a tablet on the right](/public/blog-images/gym-management-software-india-guide-before-after.png)
-*Same front desk, before and after — nothing manual left to forget.*
+![Register and paper receipts on the left, a clean gym dashboard on a tablet on the right](/blog-images/gym-management-software-india-guide-before-after.png)
+_Same front desk, before and after — nothing manual left to forget._
 
 ## Getting started
 
