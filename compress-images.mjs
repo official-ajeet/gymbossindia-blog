@@ -6,7 +6,7 @@ import { readdir, stat } from 'fs/promises';
 import { join } from 'path';
 import sharp from 'sharp';
 
-const DIR = './public/blog-images';
+const DIR = './public/blog/blog-images';
 const MAX_WIDTH = 1600; // covers a 1200px display width at 2x retina
 
 const files = (await readdir(DIR)).filter((f) => /\.(png|jpe?g)$/i.test(f));

@@ -2,7 +2,7 @@
 title: "Managing Gym Members Without a Register or Excel Sheet"
 description: "Still tracking gym members on paper or in Excel? Here's exactly what breaks, what it costs you, and what switching to software actually looks like."
 pubDate: 2026-09-8
-heroImage: "/blog-images/gym-member-management-without-excelcover.png"
+heroImage: "/blog/blog-images/gym-member-management-without-excelcover.png"
 heroImageAlt: "Overwhelmed gym front desk staff surrounded by paper registers"
 tags: ["member management", "gym operations"]
 targetKeyword: "gym member management without excel"
@@ -19,7 +19,7 @@ If you're running your gym off a register at the front desk, or an Excel sheet s
 - **It breaks with more than one person updating it.** Two staff members editing the same Excel file, or one register with illegible handwriting from a different shift, means the "source of truth" often isn't.
 - **There's no backup.** A spilled coffee or a corrupted file, and months of member history is gone.
 
-![A worn paper register next to a cluttered spreadsheet on a gym front desk](/blog-images/gym-member-management-without-excelthe-mess.png)
+![A worn paper register next to a cluttered spreadsheet on a gym front desk](/blog/blog-images/gym-member-management-without-excelthe-mess.png)
 _This is what "we'll fix it later" usually looks like at the front desk._
 
 ## What switching actually looks like
@@ -36,7 +36,7 @@ Moving off a register isn't a multi-week IT project — it's usually:
 - **A live revenue view** — this month's collections at a glance, not reconstructed from a stack of receipts at month-end.
 - **Every staff member sees the same data**, in real time, from any device.
 
-![Gym front desk staff smiling while checking a tablet dashboard](/blog-images/gym-member-management-without-excelthe-payoff.png)
+![Gym front desk staff smiling while checking a tablet dashboard](/blog/blog-images/gym-member-management-without-excelthe-payoff.png)
 _Same front desk, same staff — just nothing left to search for._
 
 ## "My staff isn't very tech-savvy"
