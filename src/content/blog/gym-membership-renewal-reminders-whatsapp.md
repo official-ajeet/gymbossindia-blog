@@ -2,7 +2,7 @@
 title: "Stop Losing Members to Missed Renewals: A WhatsApp Reminder Workflow"
 description: "Most gym renewal losses aren't members quitting — they're memberships nobody reminded them about. Here's a one-tap WhatsApp workflow that fixes that."
 pubDate: 2026-09-16
-heroImage: "/public/blog-images/gym-membership-renewal-reminders-whatsappcover.png"
+heroImage: "/blog-images/gym-membership-renewal-reminders-whatsappcover.png"
 heroImageAlt: "Gym owner checking a tablet showing expiring memberships, phone in hand"
 tags: ["retention", "whatsapp", "renewals"]
 targetKeyword: "gym membership renewal reminder"
