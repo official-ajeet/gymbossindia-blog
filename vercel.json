@@ -1,5 +1,12 @@
 {
-  "framework": "astro",
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  "rewrites": [
+    {
+      "source": "/blog",
+      "destination": "https://gymbossindia-blog.vercel.app"
+    },
+    {
+      "source": "/blog/:path*",
+      "destination": "https://gymbossindia-blog.vercel.app/:path*"
+    }
+  ]
 }
