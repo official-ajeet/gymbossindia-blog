@@ -1,0 +1,53 @@
+---
+// Direct port of WhatsAppButton.jsx. React's useState/useEffect (timed
+// tooltip show/hide) becomes setTimeout in a plain <script>.
+// TODO: confirm 917838200150 is the correct, final number before deploying.
+const WHATSAPP_NUMBER = '917838200150';
+const DEFAULT_MESSAGE = "Hi! I'm interested in GymBoss India for my gym. Can you tell me more?";
+const chatUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(DEFAULT_MESSAGE)}`;
+---
+
+<div class="fixed bottom-5 right-5 z-40 flex items-center gap-2">
+  <div
+    id="wa-tooltip"
+    class="hidden sm:flex items-center bg-white border border-slate-100 shadow-lg rounded-2xl px-4 py-2.5"
+  >
+    <p class="text-xs font-semibold text-slate-700 whitespace-nowrap">Questions? Chat with us 👋</p>
+  </div>
+
+  <a
+    id="wa-link"
+    href={chatUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    title="Chat with us on WhatsApp"
+    aria-label="Chat with us on WhatsApp"
+    class="flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#1fb855] rounded-full shadow-lg shadow-[#25D366]/30 transition-all hover:scale-105"
+  >
+    <svg viewBox="0 0 32 32" width="26" height="26" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.004 0C7.16 0 0 7.16 0 16.004c0 2.82.738 5.566 2.14 7.99L0 32l8.2-2.12a15.93 15.93 0 0 0 7.804 1.984h.004c8.84 0 16-7.16 16-16.004C32.008 7.16 24.848 0 16.004 0Zm0 29.27a13.24 13.24 0 0 1-6.752-1.852l-.484-.288-4.866 1.258 1.298-4.744-.316-.488a13.24 13.24 0 0 1-2.03-7.152C2.854 8.65 8.65 2.854 16.004 2.854c3.534 0 6.854 1.378 9.35 3.876a13.137 13.137 0 0 1 3.872 9.276c0 7.354-5.998 13.264-13.222 13.264Zm7.262-9.928c-.398-.2-2.354-1.162-2.718-1.296-.364-.134-.63-.2-.894.2-.266.398-1.03 1.296-1.262 1.562-.232.266-.464.298-.862.1-.398-.2-1.682-.62-3.204-1.978-1.184-1.056-1.984-2.36-2.216-2.758-.232-.398-.024-.612.176-.81.18-.18.398-.464.598-.696.2-.232.266-.398.398-.664.134-.266.066-.498-.034-.696-.1-.2-.894-2.154-1.224-2.952-.322-.776-.65-.67-.894-.684-.232-.012-.498-.014-.764-.014-.266 0-.696.1-1.06.498-.364.398-1.39 1.358-1.39 3.31 0 1.952 1.422 3.838 1.622 4.104.2.266 2.798 4.27 6.778 5.988.948.41 1.686.654 2.262.836.95.302 1.816.26 2.5.158.762-.114 2.354-.962 2.686-1.892.332-.93.332-1.726.232-1.892-.1-.166-.364-.266-.762-.466Z" />
+    </svg>
+  </a>
+</div>
+
+<script>
+  // Mirrors the 2.5s show / 7.5s auto-hide timers, and hide-on-click, from
+  // WhatsAppButton.jsx. The original only ever rendered the tooltip inside
+  // a "hidden sm:flex" wrapper (i.e. never shown below the sm breakpoint) —
+  // matchMedia here preserves that instead of a bare classList.remove,
+  // which would incorrectly reveal it on mobile too.
+  const tooltip = document.getElementById('wa-tooltip');
+  const link = document.getElementById('wa-link');
+  const isDesktop = () => window.matchMedia('(min-width: 640px)').matches;
+
+  const showTimer = setTimeout(() => {
+    if (isDesktop()) tooltip?.classList.remove('hidden');
+  }, 2500);
+  const hideTimer = setTimeout(() => tooltip?.classList.add('hidden'), 7500);
+
+  link?.addEventListener('click', () => {
+    tooltip?.classList.add('hidden');
+    clearTimeout(showTimer);
+    clearTimeout(hideTimer);
+  });
+</script>

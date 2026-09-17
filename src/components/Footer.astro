@@ -1,0 +1,96 @@
+---
+// Direct port of SiteFooter.jsx. onClick+handleCurrentPageChange (SPA nav)
+// becomes plain <a href> since this is a separate static deployment —
+// a real page load between /blog and the app is expected here.
+
+const SOCIAL_LINKS = [
+  { label: 'Instagram', href: 'https://instagram.com/gymbossindia' },
+  { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61591426952349' },
+  { label: 'YouTube', href: 'https://www.youtube.com/@GymBossIndia' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/company/gymboss-india' },
+  { label: 'Quora', href: 'https://www.quora.com/profile/GymBoss-India' },
+];
+
+const FOOTER_LINKS = [
+  { label: 'Software', href: 'https://gymboss.in/software' },
+  { label: 'Websites', href: 'https://gymboss.in/websites' },
+  { label: 'Software Features', href: 'https://gymboss.in/features' },
+  { label: 'Software Pricing', href: 'https://gymboss.in/pricing' },
+  { label: 'Services', href: 'https://gymboss.in/services' },
+  { label: 'Blog', href: `${import.meta.env.BASE_URL}/` },
+  { label: 'Sign In', href: 'https://gymboss.in/login' },
+  { label: 'Sign Up', href: 'https://gymboss.in/signup' },
+  { label: 'Terms', href: 'https://gymboss.in/terms' },
+  { label: 'Privacy', href: 'https://gymboss.in/privacy' },
+  { label: 'Refund Policy', href: 'https://gymboss.in/refund' },
+  { label: 'FAQ', href: 'https://gymboss.in/faq' },
+  { label: 'Contact', href: 'https://gymboss.in/contact' },
+];
+---
+
+<footer class="border-t border-slate-100 py-10 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-5 mb-6">
+      <a href="https://gymboss.in/" class="flex items-center shrink-0">
+        <img
+          src="https://gymboss.in/GymBoss%20India%20Icon.png"
+          alt="GymBoss India"
+          class="h-6 sm:h-10 md:h-10 w-auto object-contain shrink-0"
+        />
+      </a>
+
+      <div class="flex items-center gap-2">
+        {SOCIAL_LINKS.map((s) => (
+          <a
+            href={s.href}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={s.label}
+            class="w-8 h-8 rounded-xl bg-slate-100 text-slate-500 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-all duration-200"
+          >
+            {s.label === 'Instagram' && (
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+              </svg>
+            )}
+            {s.label === 'Facebook' && (
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            )}
+            {s.label === 'YouTube' && (
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+                <polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
+              </svg>
+            )}
+            {s.label === 'LinkedIn' && (
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            )}
+            {s.label === 'Quora' && (
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.85 0 3.58-.51 5.07-1.39l1.93 1.39h3l-2.79-2.01C20.59 18.14 22 15.23 22 12c0-5.52-4.48-10-10-10zm3.5 14.5c-.55-.78-1.18-1.28-2.18-1.28-.6 0-1.07.19-1.43.43l-.88-1.25c.68-.46 1.53-.74 2.49-.74 1.44 0 2.52.67 3.26 1.71A7.44 7.44 0 0 1 12 19.5a7.5 7.5 0 0 1-7.5-7.5A7.5 7.5 0 0 1 12 4.5a7.5 7.5 0 0 1 7.5 7.5c0 1.77-.61 3.39-1.63 4.67l-.87-.67z" />
+              </svg>
+            )}
+          </a>
+        ))}
+      </div>
+
+      <p class="text-xs text-slate-400">
+        &copy; {new Date().getFullYear()} GymBoss India · Built for gym owners in India
+      </p>
+    </div>
+
+    <div class="flex flex-wrap justify-center sm:justify-start gap-x-6 gap-y-2 text-xs text-slate-400 border-t border-slate-50 pt-6">
+      {FOOTER_LINKS.map((link) => (
+        <a href={link.href} class="hover:text-slate-600">{link.label}</a>
+      ))}
+    </div>
+  </div>
+</footer>

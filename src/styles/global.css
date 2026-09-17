@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Matches the main gymboss.in app: DM Sans body, DM Serif Display
+   headings, default Tailwind slate/blue palette. */
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "DM Serif Display", ui-serif, Georgia, serif;
+}
+
+body {
+  font-family: var(--font-sans);
+}

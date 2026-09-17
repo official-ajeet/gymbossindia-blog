@@ -1,0 +1,70 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  type?: 'website' | 'article';
+  pubDate?: Date;
+  updatedDate?: Date;
+  author?: string;
+}
+
+const {
+  title,
+  description,
+  image = '/blog/blog-images/default-og.jpg',
+  type = 'website',
+  pubDate,
+  updatedDate,
+  author,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const absoluteImageURL = new URL(image, Astro.site);
+const fullTitle = `${title} | GymBoss India Blog`;
+
+const articleSchema =
+  type === 'article'
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: title,
+        description,
+        image: absoluteImageURL.toString(),
+        datePublished: pubDate?.toISOString(),
+        dateModified: (updatedDate ?? pubDate)?.toISOString(),
+        author: { '@type': 'Organization', name: author ?? 'GymBoss India' },
+        publisher: {
+          '@type': 'Organization',
+          name: 'GymBoss India',
+          logo: {
+            '@type': 'ImageObject',
+            url: new URL('/logo.png', 'https://gymboss.in').toString(),
+          },
+        },
+        mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalURL.toString() },
+      }
+    : null;
+---
+
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={absoluteImageURL} />
+<meta property="og:site_name" content="GymBoss India" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={absoluteImageURL} />
+
+{
+  articleSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  )
+}

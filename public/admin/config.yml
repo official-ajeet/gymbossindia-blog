@@ -1,0 +1,41 @@
+# Decap CMS config — this is what Divyam/Manas will actually use to write posts.
+# They get a form UI at gymboss.in/blog/admin, never touch git or markdown syntax directly.
+
+backend:
+  name: github
+  repo: YOUR_GITHUB_ORG/gymboss-blog # TODO: replace with the real repo path
+  branch: main
+  # GitHub's "github" backend needs a small OAuth proxy to hand out login
+  # tokens (GitHub doesn't allow CMS-style OAuth directly). Deploy any of
+  # the free options below as its own tiny Vercel project, then set base_url
+  # to that deployment's URL. See README.md "Setting up Decap CMS auth".
+  base_url: https://YOUR-OAUTH-PROXY.vercel.app
+
+# Lets interns preview the built post before it goes live, without needing
+# a separate staging deploy.
+local_backend: true
+
+media_folder: "public/blog-images"
+public_folder: "/blog/blog-images"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    identifier_field: title
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Meta Description", name: "description", widget: "text", hint: "140-160 characters, shown in Google results and link previews." }
+      - { label: "Publish Date", name: "pubDate", widget: "datetime" }
+      - { label: "Updated Date", name: "updatedDate", widget: "datetime", required: false }
+      - { label: "Hero Image", name: "heroImage", widget: "image", required: false }
+      - { label: "Hero Image Alt Text", name: "heroImageAlt", widget: "string", required: false }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Target Keyword", name: "targetKeyword", widget: "string", required: false, hint: "The main search phrase this post is written for." }
+      - { label: "Author", name: "author", widget: "string", default: "GymBoss India Team" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - { label: "Body", name: "body", widget: "markdown" }

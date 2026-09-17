@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout
+  title="Blog"
+  description="Practical guides on running and growing a gym in India — membership billing, attendance, retention, and marketing, from the team building GymBoss India."
+>
+  <section class="max-w-6xl mx-auto px-5 md:px-6 pt-12 pb-8 md:pt-16">
+    <p class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-3">GymBoss India</p>
+    <h1 class="font-serif text-4xl md:text-6xl text-slate-900 leading-tight mb-4">
+      Guides for running your gym
+      <br />
+      <em class="text-blue-600 not-italic">smarter, not harder.</em>
+    </h1>
+    <p class="text-base md:text-lg text-slate-500 max-w-xl leading-relaxed">
+      Membership billing, attendance, retention, and marketing — from the team building GymBoss India.
+    </p>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-5 md:px-6 pb-16 md:pb-24">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+      {posts.map((post) => <PostCard post={post} />)}
+    </div>
+    {posts.length === 0 && <p class="text-slate-500">No posts published yet — check back soon.</p>}
+  </section>
+</BaseLayout>
