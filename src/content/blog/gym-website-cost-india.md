@@ -6,7 +6,7 @@ heroImage: "/blog/blog-images/gym-website-cost-india-cover.png"
 tags: ["gym website", "pricing"]
 targetKeyword: "gym website cost india"
 author: "GymBoss India Team"
-draft: true
+draft: false
 ---
 
 Gym website pricing in India varies a lot more than most owners expect — from a free DIY builder to a ₹50,000+ agency project — and the difference isn't always about quality. Here's what actually drives the cost.
