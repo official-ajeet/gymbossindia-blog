@@ -1,7 +1,7 @@
 ---
 title: "How Much Does a Gym Website Cost in India? (2026 Pricing Guide)"
 description: "A breakdown of what gym websites actually cost in India in 2026 — DIY builders, freelancers, agencies, and done-for-you services — and what changes the price."
-pubDate: 2026-09-29
+pubDate: 2026-09-25
 heroImage: "/blog/blog-images/gym-website-cost-india-cover.png"
 tags: ["gym website", "pricing"]
 targetKeyword: "gym website cost india"
